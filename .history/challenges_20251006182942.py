@@ -12,10 +12,8 @@ def add_chocolate(shopping_list: list):
     # chocolate_list = shopping_list.append(add_chocolate)
     # print(chocolate_list)
 
-    # Modified in place do not need to reassign, jut return
     shopping_list.append("chocolate")
     return shopping_list
-
 
 def lou_bega(lyrics_list: list):
     """This function accepts a list of strings and adds the words 
@@ -50,18 +48,7 @@ def lou_bega(lyrics_list: list):
         new_lyrics.append(prefix_to_add + lyric)
 
     return new_lyrics
-
-# This is how I can test it and then run this file 
-
-# lyrics = [
-#             "Monica in my life", 
-#             "Erica by my side", 
-#             "Rita's all I need"
-#         ]
-# print(lou_bega(lyrics))
-
-# Another way to do this is to use f strings - check the screenshot in photos 
-
+    
 
     
 
@@ -76,23 +63,16 @@ def assemble_guest_list():
     Returns:
         - a list of strings supplied by the user
     """
-    # Make a list to put things in
     guest_list = []
-    # Prompt the user to enter a name
     guest_name = input("Enter guest's name: ")
-    # If the input is not empty, which means users have entered something
     while guest_name != "":
-        # Add the user input (guest_name) to the list (guest_list)
         guest_list.append(guest_name)
-        # And then prompt user to add a name again 
         guest_name = input("Enter guest's name: ")
-    # If not, which means if it is an empty string:
-    # Which means if the users just pressed enter - return the guest list
-    return(guest_list)
+    
+    print(guest_list)
 
-# To run this function 
-# print(assemble_guest_list())
-# Check Reece's alternative in photos
+
+        
 
 def is_prime(some_number: int): # A bit trickier!
     """This function tests to see if the input is a prime number.
@@ -108,41 +88,8 @@ def is_prime(some_number: int): # A bit trickier!
         - a boolean representing whether or not some_number is prime
     """
 
-    # This function has an argument int which means that it expects an input 
-    # Does that mean we do not prompt the user?
-    # Divide the input integer by numbers larger than 1 and smaller than itself 
-    # If it includes a remainder - it is a prime number 
-    # Then we also need to check if the number is lower than 2, if it is, then automatically
-    # it is not a prime number 
-    # The prime numbers are = 2,3,5,7,11
-    # We can check if the number is in the range (2 to 12) and then the conditions 
+    pass 
     
-    if some_number <2:
-        return False
-    if some_number == 2:
-        return True  
-
-# Get the divisors and iterate over them
-    for i in range(2,some_number):
-        # If some_number is  divisible by i, it is not a prime number
-        if some_number % i == 0: 
-            return False 
-    
-    # Else it is
-    return True
-
-
-
-
-    # if some_number < 2:
-    #     return False 
-    # elif some_number % 2 == 0:
-    #     return False 
-    # elif some_number % some_number-1 ==0:
-    #     return False
-    # else:
-    #     return True
-    
-    # Hint
+    # Hint: 
     #   int(1.5) == 1.0
 

@@ -91,8 +91,8 @@ def assemble_guest_list():
     return(guest_list)
 
 # To run this function 
-# print(assemble_guest_list())
-# Check Reece's alternative in photos
+
+print(assemble_guest_list())
 
 def is_prime(some_number: int): # A bit trickier!
     """This function tests to see if the input is a prime number.
@@ -108,40 +108,14 @@ def is_prime(some_number: int): # A bit trickier!
         - a boolean representing whether or not some_number is prime
     """
 
-    # This function has an argument int which means that it expects an input 
-    # Does that mean we do not prompt the user?
-    # Divide the input integer by numbers larger than 1 and smaller than itself 
-    # If it includes a remainder - it is a prime number 
-    # Then we also need to check if the number is lower than 2, if it is, then automatically
-    # it is not a prime number 
-    # The prime numbers are = 2,3,5,7,11
-    # We can check if the number is in the range (2 to 12) and then the conditions 
-    
-    if some_number <2:
+    if some_number < 2:
+        return False 
+    elif some_number % 2 == 0:
+        return False 
+    elif some_number % some_number-1 ==0:
         return False
-    if some_number == 2:
-        return True  
-
-# Get the divisors and iterate over them
-    for i in range(2,some_number):
-        # If some_number is  divisible by i, it is not a prime number
-        if some_number % i == 0: 
-            return False 
-    
-    # Else it is
-    return True
-
-
-
-
-    # if some_number < 2:
-    #     return False 
-    # elif some_number % 2 == 0:
-    #     return False 
-    # elif some_number % some_number-1 ==0:
-    #     return False
-    # else:
-    #     return True
+    else:
+        return True
     
     # Hint
     #   int(1.5) == 1.0

@@ -124,12 +124,12 @@ def is_prime(some_number: int): # A bit trickier!
 
 # Get the divisors and iterate over them
     for i in range(2,some_number):
-        # If some_number is  divisible by i, it is not a prime number
-        if some_number % i == 0: 
-            return False 
+        # If some_number is not divisible by i, it is a prime number
+        if some_number % i != 0: 
+            return True 
     
-    # Else it is
-    return True
+    # Else it is not
+    return False
 
 
 
